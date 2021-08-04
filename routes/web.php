@@ -1,5 +1,6 @@
 <?php
-
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 
 Route::get('/', function () {return view('welcome');});
@@ -20,5 +21,5 @@ Route::post('admin-password/email', 'Admin\ForgotPasswordController@sendResetLin
 Route::get('admin/reset/password/{token}', 'Admin\ResetPasswordController@showResetForm')->name('admin.password.reset');
 Route::post('admin/update/reset', 'Admin\ResetPasswordController@reset')->name('admin.reset.update');
 Route::get('/admin/Change/Password','AdminController@ChangePassword')->name('admin.password.change');
-Route::post('/admin/password/update','AdminController@Update_pass')->name('admin.password.update'); 
+Route::post('/admin/password/update','AdminController@Update_pass')->name('admin.password.update');
 Route::get('admin/logout', 'AdminController@logout')->name('admin.logout');
