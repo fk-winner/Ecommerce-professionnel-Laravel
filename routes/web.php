@@ -31,3 +31,9 @@ Route::get('admin/logout', 'AdminController@logout')->name('admin.logout');
     Route::get('delete/category/{id}', 'Admin\Category\CategoryController@Deletecategory');
     Route::get('edit/cateory/{id}', 'Admin\Category\CategoryController@Editcategory');
     Route::post('update/category/{id}', 'Admin\Category\CategoryController@Updatecategory');
+    //// Brand
+    Route::get('admin/brands', 'Admin\Category\BrandController@brand')->name('brands');
+    Route::post('admin/store/brand', 'Admin\Category\BrandController@storebrand')->name('store.brand');
+    Route::get('delete/brand/{id}', 'Admin\Category\BrandController@Deletebrand');
+    Route::get('edit/brand/{id}', 'Admin\Category\BrandController@Editbrand');
+    Route::post('update/brand/{id}', 'Admin\Category\BrandController@Updatebrand');

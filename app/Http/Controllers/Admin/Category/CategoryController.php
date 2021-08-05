@@ -31,11 +31,11 @@ class CategoryController extends Controller
         $category = new Category();
         $category->category_name = $request->category_name;
         $category->save();
-        $notification=array(
+         $notification=array(
             'messege'=>'Category Added Successfully',
             'alert-type'=>'success ',
             );
-        return Redirect()->back()->with($notification);
+           return Redirect()->back()->with($notification);
     }
 
     public function Deletecategory($id){
