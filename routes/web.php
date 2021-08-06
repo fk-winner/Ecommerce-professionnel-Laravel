@@ -37,3 +37,10 @@ Route::get('admin/logout', 'AdminController@logout')->name('admin.logout');
     Route::get('delete/brand/{id}', 'Admin\Category\BrandController@Deletebrand');
     Route::get('edit/brand/{id}', 'Admin\Category\BrandController@Editbrand');
     Route::post('update/brand/{id}', 'Admin\Category\BrandController@Updatebrand');
+
+    //// Sub-Categories
+    Route::get('admin/sub/categories', 'Admin\Category\SubCategoryController@SubCategory')->name('sub.categories');
+    Route::post('admin/store/subcategory', 'Admin\Category\SubCategoryController@Storecategory')->name('store.subcatgory');
+    Route::get('delete/sub/category/{id}', 'Admin\Category\SubCategoryController@Deletesubcat');
+    Route::get('edit/sub/cateory/{id}', 'Admin\Category\SubCategoryController@Editsubcat');
+    Route::post('update/sub/category/{id}', 'Admin\Category\SubCategoryController@Updatesubcat');
