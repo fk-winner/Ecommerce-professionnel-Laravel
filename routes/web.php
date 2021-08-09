@@ -44,3 +44,22 @@ Route::get('admin/logout', 'AdminController@logout')->name('admin.logout');
     Route::get('delete/sub/category/{id}', 'Admin\Category\SubCategoryController@Deletesubcat');
     Route::get('edit/sub/cateory/{id}', 'Admin\Category\SubCategoryController@Editsubcat');
     Route::post('update/sub/category/{id}', 'Admin\Category\SubCategoryController@Updatesubcat');
+
+    //// Coupons
+    Route::get('admin/coupon', 'Admin\Category\CouponController@Coupon')->name('admin.coupon');
+    Route::post('admin/store/coupon', 'Admin\Category\CouponController@Storecoupon')->name('store.coupon');
+    Route::get('delete/coupon/{id}', 'Admin\Category\CouponController@Deletecoupon');
+    Route::get('edit/coupon/{id}', 'Admin\Category\CouponController@Editcoupon');
+    Route::post('update/coupon/{id}', 'Admin\Category\CouponController@Updatecoupon');
+
+    //// Newslaters
+    Route::get('admin/newslater', 'Admin\Category\CouponController@Newslater')->name('admin.newslater');
+    Route::get('delete/sub/{id}', 'Admin\Category\CouponController@Deletesubscriber');
+
+
+    //// Frontend All Routes
+    Route::post('store/newslater', 'FrontendController@StoreNewslater')->name('store.neslaters');
+
+
+
+
